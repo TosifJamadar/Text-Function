@@ -68,9 +68,10 @@
 <div>
 <div class="container">
 <input type="text" id="student-name" placeholder="Enter Student Name" class="names">
-<button type="btn" class="btn-action"  onClick="addStudent()">Add</button>
-<button type="btn" class="btn-action" onClick="removeStudent()">Remove</button>
+<button type="btn" class="btn-action"  onclick="addStudent()">Add</button>
+<button type="btn" class="btn-action" onclick="removeStudent()">Remove</button>
 </div>
+
 <div id="students-container"></div>
 </div>
     <script>
@@ -88,7 +89,7 @@ function loadStudents(){
     studentsContainer.innerHTML = "";
 
 for(let i = 0; i < students.length; i++){
-    studentsContainer.innerHTML += <div class='student-card'>${getRandomEmoji()} ${i + 1}) ${students[i]}</div>;
+    studentsContainer.innerHTML += `<div class='student-card'>${getRandomEmoji()} ${i + 1}) ${students[i]}</div>`;
 }
 }
 loadStudents();
